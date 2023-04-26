@@ -9,7 +9,7 @@ import java.util.*;
 
 public class BooleanSearchEngine implements SearchEngine {
     //???
-    private  Map<String, List<PageEntry>> wordsStatistic = new HashMap<>();
+    private Map<String, List<PageEntry>> wordsStatistic = new HashMap<>();
 
     public BooleanSearchEngine(File pdfsDir) throws IOException {
         // прочтите тут все pdf и сохраните нужные данные,
@@ -71,6 +71,6 @@ public class BooleanSearchEngine implements SearchEngine {
     @Override
     public List<PageEntry> search(String word) {
         // тут реализуйте поиск по слову
-        return Collections.emptyList();
+        return this.wordsStatistic.get(word);
     }
 }

@@ -3,6 +3,18 @@ public class PageEntry implements Comparable<PageEntry> {
     private final int page;       //номер страницы
     final int count;      //кол-во раз, которое встретилось это слово в ней
 
+    public String getPdfName() {
+        return pdfName;
+    }
+
+    public int getPage() {
+        return page;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
     // ???
     public PageEntry(String pdfName, int page, int count) {
         this.pdfName = pdfName;
@@ -11,9 +23,9 @@ public class PageEntry implements Comparable<PageEntry> {
     }
 
     public int compareTo(PageEntry o) {
-        if (count < o.count) {
+        if (count > o.count) {
             return -1;
-        } else if (count > o.count) {
+        } else if (count < o.count) {
             return 1;
         } else return 0;
 
