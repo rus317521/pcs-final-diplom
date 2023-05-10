@@ -7,7 +7,7 @@ import java.net.Socket;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        BooleanSearchEngine engine = new BooleanSearchEngine(new File("./pcs-final-diplom/pdfs"));
+        BooleanSearchEngine engine = new BooleanSearchEngine(new File("pdfs"));
         //  System.out.println(engine.search("бизнес"));
 
         // здесь создайте сервер, который отвечал бы на нужные запросы
