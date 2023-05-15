@@ -71,6 +71,13 @@ public class BooleanSearchEngine implements SearchEngine {
     @Override
     public List<PageEntry> search(String word) {
         // тут реализуйте поиск по слову
-        return this.wordsStatistic.get(word);
+        word = word.toLowerCase();
+        if (this.wordsStatistic.containsKey(word)) {
+            return this.wordsStatistic.get(word);
+        } else {
+            List<PageEntry> list = new ArrayList<>();
+            return list;
+        }
+
     }
 }
